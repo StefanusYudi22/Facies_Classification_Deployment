@@ -45,10 +45,10 @@ jobs:
     steps:
     - name: Creating SSH Configuration File
       env:
-        SSH_USER: ${{ secrets.SSH_USER }}
-        SSH_KEY: ${{ secrets.SSH_KEY }}
-        SSH_HOST: ${{ secrets.SSH_HOST }}
-        DOCKER_USER: ${{ secrets.DOCKER_HUB_USER }}
+        SSH_USER: ${{secrets.SSH_USER}}
+        SSH_KEY: ${{secrets.SSH_KEY}}
+        SSH_HOST: ${{secrets.SSH_HOST}}
+        DOCKER_USER: ${{secrets.DOCKER_HUB_USER}}
       run: |
         mkdir -p ~/.ssh/
         echo "$SSH_KEY" > ~/.ssh/facies_classification.pem
