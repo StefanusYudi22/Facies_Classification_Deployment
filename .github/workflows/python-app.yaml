@@ -51,13 +51,13 @@ jobs:
         DOCKER_USER: ${{ secrets.DOCKER_HUB_USER }}
       run: |
         mkdir -p ~/.ssh/
-        echo "$SSH_KEY" > ~/.ssh/deployment.pem
-        chmod 600 ~/.ssh/deployment.pem
+        echo "$SSH_KEY" > ~/.ssh/facies_classification.pem
+        chmod 600 ~/.ssh/facies_classification.pem
         cat >> ~/.ssh/config <<END
         Host deploy_ec2
           HostName $SSH_HOST
           User $SSH_USER
-          IdentityFile ~/.ssh/deployment.pem
+          IdentityFile ~/.ssh/facies_classification.pem
           StrictHostKeyChecking no
         END
         
