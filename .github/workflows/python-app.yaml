@@ -33,11 +33,9 @@ jobs:
         password: ${{secrets.DOCKER_HUB_TOKEN}}
 
     - name: Docker Compose Build and Push
-      uses : docker/build-push-action@v2
-      with :
-        context : .
-        push: true
-        tags: facies_classification
+      run: |
+        docker compose build --no-cache
+        docker compose push
   
   docker-pull-ec2:
     needs: docker-compose-build
