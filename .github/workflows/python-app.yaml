@@ -35,7 +35,7 @@ jobs:
     - name: Docker Compose Build and Push
       run: |
         docker compose build --no-cache
-        docker compose push
+        docker compose push yudistefanus22docker/facies_classification:version1
   
   docker-pull-ec2:
     needs: docker-compose-build
