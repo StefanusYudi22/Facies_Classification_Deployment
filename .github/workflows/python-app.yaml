@@ -34,8 +34,8 @@ jobs:
 
     - name: Docker Compose Build and Push
       run: |
-        docker compose build --no-cache
-        docker compose push
+        sudo docker compose build --no-cache
+        sudo docker compose push
   
   docker-pull-ec2:
     needs: docker-compose-build
