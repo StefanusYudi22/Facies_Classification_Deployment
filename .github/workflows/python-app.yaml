@@ -38,8 +38,6 @@ jobs:
     - name: Docker Compose Build and Push
       uses : docker/build-push-action@v3
       with:
-          context: .
-          file: ./Dockerfile
           push: true
           tags: ${{secrets.DOCKER_HUB_USER}}/facies_classification:latest
 
