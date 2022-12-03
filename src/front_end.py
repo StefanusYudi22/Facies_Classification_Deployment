@@ -4,12 +4,12 @@ import joblib
 from PIL import Image
 
 # Load and set images in the first place
-#header_images = Image.open('assets/banner.png')
-#st.image(header_images)
+header_images = Image.open('image/oil_well_banner.jpg')
+st.image(header_images)
 
 # Add some information about the service
 st.title("Lithofacies Classification")
-st.subheader("Just enter variabel below then click Predict button")
+st.subheader("Enter measurement value then click predict button")
 
 # Create form of input
 with st.form(key = "well_measurement_form"):

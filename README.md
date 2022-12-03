@@ -56,12 +56,23 @@ Facies definition is sometimes very time-consuming activity and expensive.
 
 front end was set, so the value entering the model inside the range value, hence the model wont be error if there are no data entering the model. This is one of the defense in this facies classification prediction model. 
 
-![alt text](image front end here)
+![alt text](image/lithofacies_classification_streamlit.png)
 
 as you can see the steramlit front end consist of several value box to give the model value of wireline measurement to predict the facies label. For first experiment I made this very simple just to test whether the model can be deployed into the cloud server or not.
 
 ## E. RESPONSE PREDICTION
 
+Response prediction will show as streamlit success object shown under the value input box. Error value also will be shown at the sampe place if there are error when predicting the facies label
+
+![alt text](image/lithofacies_classification_prediction.png)
+
 ## F. NOTES FOR FURTHER IMPROVEMENT
+- This project can be improved to predict a sequence of well measurement data by depth, so entire well lithofacies can be predicted
+- The modeling also can be expanded to not just supervised machine learning but we can use deep learning to predict the lithofacies inside the oil well to be more accurate prediction
 
 ## G. REFERENCE
+- [1] Imamverdiyev, Y., Sukhostat, L., 2019, Lithological facies classification using deep convolutional neural network. Journal of Petroleum Science and Engineering 174 (2019) 216–228
+- [2] M. Gifford, C. Agah, A., 2010, Collaborative multi-agent rock facies classification from wireline well log data, Engineering Applications of Artificial Intelligence 23 (2010) 1158–1172
+- [3] W. Dunham, M. Malcolm, A. Kim Welford, J. 2020, Improved well log classification using semisupervised Gaussian mixture models and a new hyper-parameter selection strategy, Computers and Geosciences 140 (2020) 104501
+- [4] W.J. Glover P., K. Mohammed-Sajed, O., Akyiiz, C., Lorinczi, P. 2022, Clustering of facies in tight carbonates using machine learning, Marine and Petroleum Geology 144 (2022) 105828
+- [5] Antariksa, G. Muamar, R. Lee, J. 2022, Performance evaluation of machine learning-based classification with rock-physics analysis of geological lithofacies in Tarakan Basin, Indonesia, Journal of Petroleum Science and Engineering 208 (2022) 109250
