@@ -8,11 +8,13 @@ config_dir = "config/config.yaml"
 
 def load_config() -> dict:     
     # load yaml file from configuration directory
+    print("loading configuration file .....")
     try:
         with open(config_dir, "r") as file:
             config = yaml.safe_load(file)
     except FileNotFoundError as fe:
             raise RuntimeError("Parameters file not found in path.")
+    print("configuration file loaded")
     return config     # Return params in dict format
 
 def dump_pickle(data, file_path: str) -> None :
