@@ -73,7 +73,7 @@ with st.form(key = "well_measurement_form"):
 
         # Create loading animation while predicting
         with st.spinner("Sending data to prediction server ..."):
-            res = requests.post("http://api_backend:8080/predict", json = raw_data).json()
+            res = requests.post("http://108.136.248.141:8080/predict", json = raw_data).json()
             
         # Parse the prediction result
         if res["error_msg"] != "":
