@@ -53,7 +53,7 @@ with st.form(key = "well_measurement_form"):
         label = "6.\tEnter Non-Marine Marine Value:",
         min_value = 1,
         max_value = 2,
-        help = "Value range from 1 to 2"
+        help = "Value 1 or 2"
     )
     
     # Create button to submit the form
