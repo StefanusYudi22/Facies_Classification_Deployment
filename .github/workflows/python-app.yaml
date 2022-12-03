@@ -52,7 +52,7 @@ jobs:
       run: |
         mkdir -p ~/.ssh/
         echo "$SSH_KEY" > ~/.ssh/facies_classification.pem
-        chmod 600 ~/.ssh/facies_classification.pem
+        chmod 400 ~/.ssh/facies_classification.pem
         cat >> ~/.ssh/config <<END
         Host deploy_ec2
           HostName $SSH_HOST
