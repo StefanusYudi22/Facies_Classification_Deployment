@@ -68,7 +68,7 @@ def check_data_type(input_data:pd.DataFrame, output_data:pd.DataFrame, data_type
     output_data = output_data.astype('str')
     input_data[['Formation','Well Name']] = input_data[['Formation','Well Name']].astype('str')
     input_data[['GR','ILD_log10','DeltaPHI','PHIND','PE','RELPOS']] = input_data[['GR','ILD_log10','DeltaPHI','PHIND','PE','RELPOS']].astype('float64')
-    input_data['NM_M'] = input_data['NM_M'].astype('int64')
+    input_data['NM_M'] = input_data['NM_M'].astype('int32')
     
     print(f"{data_type} data type checked")
     return input_data, output_data
