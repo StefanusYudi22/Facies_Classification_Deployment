@@ -69,5 +69,5 @@ jobs:
         ssh deploy_ec2 "rm -rf temp/"
         ssh deploy_ec2 "cd facies_classification/ && sudo docker compose rm -sf api_backend && sudo docker compose rm -sf streamlit_frontend"
         ssh deploy_ec2 "cd facies_classification/ || sudo docker rmi -f yudistefanus22docker/ml_process_api || sudo docker rmi -f yudistefanus22docker/ml_process_streamlit"
-        ssh deploy_ec2 "cd facies_classification/ && sudo docker compose pull && sudo docker compose up"
+        ssh deploy_ec2 "cd facies_classification/ && sudo docker compose pull"
         ssh deploy_ec2 "cd facies_classification/ && sudo docker compose up -d"
