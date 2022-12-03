@@ -7,9 +7,7 @@
 Facies definition is sometimes very time-consuming activity and expensive.
 ### A.2. GOALS
 - The goal of this project is to find the best-supervised machine learning algorithm for lithofacies classification, and then deploy the pre-application to the server to predict the lithofacies from the well-measurement data
-<br>
-<br>
-<br>
+
 ## B. PROJECT ARCHITECTURE
 ### .github/workflows
 - Contain script python-app.yaml for CI/CD through github action
@@ -26,20 +24,18 @@ Facies definition is sometimes very time-consuming activity and expensive.
 ## log 
 - Contain training log to record activity inside this directory
 ## models
-- Contain pickle file from machine learning model and decoder for data preprocessing or feature engineering
+- contain pickle file from machine learning model, and decoder such as ohe decoder and standard_scaler for data preprocessing or feature engineering
 ## src 
 - contain python executable script for this project. There are data_preprocessing.py for preprocessing data, feature_engineering.py for engineering data train and test feature for modeling, modeling.py to build the machine learning model, util.py to contain common function, api.py to construct the fastapi, front_end.py to construct the streamlit as front end and unit_test.py for unit testing function in this scripts. 
 ## .gitignore
-- to exclude python virtual machine push into github
+- contain statement to exclude python virtual machine folder push into github
 ## docker_compose.yaml 
-- File for constructing docker in CI/CD pipeline or in local
+- File for accomodating Dockerfile in api and Dockerfile in streamlit folder. This docker_compose will be use to create 2 docker image (api and streamlit) and can be used in CI/CD pipeline or in local
 ## python notebook files
 - File for project experiment, consist of data_pipeline.ipynb, feature_engineering.ipynb, modeling.ipynb. Contain experiment function that will create the python script at src folder
 ## requirement.txt
 - contain list of dependencies library to construct python virtual machine to run this project in local or remote server. 
-<br>
-<br>
-<br>
+
 ## C. PROJECT WORKFLOW
 ![alt text](image/workflow_project.jpg)
 
