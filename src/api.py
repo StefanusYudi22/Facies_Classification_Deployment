@@ -52,4 +52,4 @@ def predict(data_api: api_data):
     return {"res" : facies_label_decoder[y_pred[0]], "error_msg": ""}
 
 if __name__ == "__main__":
-    uvicorn.run("api:app", host = "0.0.0.0", port = 8080)
+    uvicorn.run("api:app", host = "108.136.42.222", port = 8080)
