@@ -32,7 +32,7 @@ Facies definition is sometimes very time-consuming activity and expensive.
 ## docker_compose.yaml 
 - File for accomodating Dockerfile in api and Dockerfile in streamlit folder. This docker_compose will be use to create 2 docker image (api and streamlit) and can be used in CI/CD pipeline or in local
 ## python notebook files
-- File for project experiment, consist of data_pipeline.ipynb, feature_engineering.ipynb, modeling.ipynb. Contain experiment function that will create the python script at src folder
+- File for project experiment, consist of data_pipeline.ipynb, feature_engineering.ipynb, modeling.ipynb, and exploratory_and_data_analysis.ipynb. Contain experiment function that will create the python script at src folder
 ## requirement.txt
 - contain list of dependencies library to construct python virtual machine to run this project in local or remote server. 
 
