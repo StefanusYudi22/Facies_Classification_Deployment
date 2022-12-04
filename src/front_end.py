@@ -15,42 +15,42 @@ st.subheader("Enter measurement value then click predict button")
 with st.form(key = "well_measurement_form"):
     # Create box for number input
     GR = st.number_input(
-        label = "1.\tEnter Gamma Ray Value:",
+        "1.\tEnter Gamma Ray Value:",
         min_value = 10.14,
         max_value = 361.15,
         help = "Value range from 10.14 to 361.15"
     )
 
     ILD_log10 = st.number_input(
-        label = "2.\tEnter Resistivity Value:",
+        "2.\tEnter Resistivity Value:",
         min_value = -0.03,
         max_value = 1.8,
         help = "Value range from -0.03 to 1.8"
     )
 
     DeltaPHI = st.number_input(
-        label = "3.\tEnter Neutron-Density Porosity Difference Value:",
+        "3.\tEnter Neutron-Density Porosity Difference Value:",
         min_value = -21.83,
         max_value = 19.31,
         help = "Value range from -21.83 to 19.31"
     )
 
     PHIND = st.number_input(
-        label = "4.\tEnter Average Neutron-Density Porosity Value:",
+        "4.\tEnter Average Neutron-Density Porosity Value:",
         min_value = 0.55,
         max_value = 84.4,
         help = "Value range from 0.55 to 84.4"
     )
 
     PE = st.number_input(
-        label = "5.\tEnter Photo-Electric Value:",
+        "5.\tEnter Photo-Electric Value:",
         min_value = 0.2,
         max_value = 8.09,
         help = "Value range from 0.2 to 8.09"
     )
 
     NM_M = st.number_input(
-        label = "6.\tEnter Non-Marine Marine Value:",
+        "6.\tEnter Non-Marine Marine Value:",
         min_value = 1,
         max_value = 2,
         help = "Value 1 or 2"
