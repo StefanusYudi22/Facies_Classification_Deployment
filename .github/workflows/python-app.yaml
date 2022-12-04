@@ -52,7 +52,7 @@ jobs:
       run: |
         mkdir -p ~/.ssh/
         echo "$SSH_KEY" > ~/.ssh/facies_classification.pem
-        chmod 400 ~/.ssh/facies_classification.pem
+        chmod 600 ~/.ssh/facies_classification.pem
         cat >> ~/.ssh/config <<END
         Host deploy_ec2
           HostName $SSH_HOST
@@ -65,9 +65,9 @@ jobs:
       run: |
         ssh deploy_ec2 "mkdir temp/"
         ssh deploy_ec2 "git clone git@github.com:StefanusYudi22/Facies_Classification_Deployment.git temp/"
-        ssh deploy_ec2 "rsync -a ./temp/ ./facies_classification/"
+        ssh deploy_ec2 "rsync -a ./temp ./facies_classification"
         ssh deploy_ec2 "rm -rf temp/"
-        ssh deploy_ec2 "cd facies_classification/ && sudo docker compose rm -sf api && sudo docker compose rm -sf streamlit"
-        ssh deploy_ec2 "cd facies_classification/ || sudo docker rmi -f yudistefanus22docker/ml_process_api || sudo docker rmi -f yudistefanus22docker/ml_process_streamlit"
-        ssh deploy_ec2 "cd facies_classification/ && sudo docker compose pull"
-        ssh deploy_ec2 "cd facies_classification/ && sudo docker compose up -d"
+        ssh deploy_ec2 "cd facies_classification && git lfs pull"
+        ssh deploy_ec2 "cd facies_classification && sudo docker compose rm -sf api && sudo docker compose rm -sf streamlit"
+        ssh deploy_ec2 "cd facies_classification || sudo docker rmi -f yudistefanus22docker/ml_process_api || sudo docker rmi -f yudistefanus22docker/ml_process_streamlit"
+        ssh deploy_ec2 "cd facies_classification && sudo docker compose pull && sudo docker compose up -d"
